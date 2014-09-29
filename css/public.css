@@ -1,0 +1,319 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-color: #fee8c7;
+}
+li {
+    list-style: none;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+div{
+    background-clip: padding-box;
+}
+.wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/game/1.0/bg.png');
+    background-size: cover;
+}
+.hole-wrap {
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+}
+.hole-wrap li {
+    float: left;
+    width: 30%;
+    height: 31%;
+    background-image: url('/img/game/1.0/animals.png');
+    background-position: 0 0;
+    background-size: cover;
+    margin: 0 2% 2% 1%;
+}
+.score-wrap {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 45%;
+    height: 6%;
+    text-align: center;
+    font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+}
+.score-wrap b {
+    display: block;
+}
+.score-wrap:before {
+    content: "当前得分"
+}
+.life-wrap {
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    width: 34%;
+}
+.life-wrap li {
+    float: left;
+    width: 29%;
+    height: 100%;
+    background-image: url('/img/game/1.0/life-exist.png');
+    background-size: cover;
+    margin-right: 4%;
+}
+.countdown {
+    position: absolute;
+    width: 8%;
+    height: 10%;
+    left: 42%;
+    top: 40%;
+    background-image: url('/img/game/1.0/countdown-2.png');
+    background-size: cover;
+    z-index: 11;
+}
+.mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+    display: none;
+}
+.blue-mask{
+    z-index: 10;
+    background-color: #92d5f6;
+}
+.black-mask{
+    z-index: 13;
+    background:#000 url('/img/game/1.0/arrow.png') right top no-repeat;
+}
+.black-mask .container{
+    margin-top: 30%;
+    text-align: center;
+    color:#fff;
+    font-size: 24px;
+}
+.show {
+    animation: displaySan 1.2s 0 steps(1) normal;
+    -webkit-animation: displaySan 1.2s 0 steps(1) normal;
+    -moz-animation: displaySan 1.2s 0 steps(1) normal;
+    -o-animation: displaySan 1.2s 0 steps(1) normal;
+}
+.halo {
+
+    animation: haloSan 1.2s 0 steps(1) normal;
+    -webkit-animation: haloSan 1.2s 0 steps(1) normal;
+    -moz-animation: haloSan 1.2s 0 steps(1) normal;
+    -o-animation: haloSan 1.2s 0 steps(1) normal;
+}
+@keyframes displaySan {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 25%;
+    }
+    50% {
+        background-position: 0 50%;
+    }
+    75% {
+        background-position: 0 75%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-webkit-keyframes displaySan {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 25%;
+    }
+    50% {
+        background-position: 0 50%;
+    }
+    75% {
+        background-position: 0 75%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-moz-keyframes displaySan {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 25%;
+    }
+    50% {
+        background-position: 0 50%;
+    }
+    75% {
+        background-position: 0 75%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-o-keyframes displaySan {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 25%;
+    }
+    50% {
+        background-position: 0 50%;
+    }
+    75% {
+        background-position: 0 75%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@keyframes haloSan {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-webkit-keyframes haloSan {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@-moz-keyframes haloSan {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-o-keyframes haloSan {
+    0% {
+        background-position: 0 100%;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.conclusion-msg {
+    z-index: 11;
+    left: 10%;
+    width: 80%;
+    top: 3%;
+    position: absolute;
+    display: none;
+    background-clip: padding-box;
+}
+.conclusion-msg .score {
+    margin: 0 19%;
+    padding: 3%;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+.conclusion-msg .evaluation {
+    background-color: #e93e30;
+    border-radius: 23px;
+    border: 2px solid #000;
+    padding: 5%;
+    margin-bottom: 5%;
+    line-height: 1.5;
+}
+.conclusion-msg .evaluation .title {
+    color: #fff;
+    text-align: center;
+    font-family: '黑体';
+    font-size: 24px;
+}
+.conclusion-msg .evaluation .msg {
+    color: #fff;
+    font-weight: 600;
+    font-family: '黑体'
+}
+.conclusion-msg .evaluation .level {
+    background-image: url('/img/game/1.0/star.png');
+    background-size: cover;
+    width: 70%;
+    margin: 0 auto 5%;
+    text-align: center;
+}
+.game-cover {
+    background-image: url('/img/game/1.0/cover.png');
+    background-size: cover;
+    z-index: 12;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.init-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    background-image: url('/img/game/1.0/start-btn.png');
+    background-size: cover;
+    width: 58%;
+}
+.down-btn {
+    background-image: url('/img/game/1.0/down-btn.png');
+    background-size: cover;
+    width: 100%;
+    display: block;
+}
+.again-btn {
+    background-image: url('/img/game/1.0/again-btn.png');
+    background-size: cover;
+    width: 43%;
+    display: inline-block;
+}
+.share-btn {
+    background-image: url('/img/game/1.0/share-btn.png');
+    background-size: cover;
+    width: 53%;
+    display: inline-block;
+    margin-left: 4%;
+}
+.opr-area {
+    margin-bottom: 5%;
+}
